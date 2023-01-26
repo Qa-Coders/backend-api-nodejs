@@ -6,7 +6,7 @@ if (args.production)
     module.exports = mongoose.connect('mongodb://nome_banco:senha@servidor.com.br:27017/usuario' ) // Umbler
 else
     mongoose.set('strictQuery', false)
-    module.exports = mongoose.connect('mongodb://localhost/banco_dados', {useNewUrlParser: true})    
+    module.exports = mongoose.connect('mongodb://172.0.0.1:27017/banco_dados', {useNewUrlParser: true})    
 
 mongoose.Error.messages.general.required = "O campo '{PATH}' é obrigatório."
 mongoose.Error.messages.Number.min = "O '{PATH}' informado é menor que o limite mínimo de '{MIN}'."
