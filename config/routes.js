@@ -5,7 +5,7 @@ module.exports = function (server) {
     server.use('/api', protectedApi);
 
     server.use('/status', (req, res) =>
-        res.send(`BACKEND is runner na live 05.`)
+        res.send(`BACKEND is runner.`)
     );
 
     const register = require('../api/register/registerService');
