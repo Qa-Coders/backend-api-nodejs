@@ -45,8 +45,8 @@ const sendErrorsFromDB = (res, dbErrors) => {
   return res.status(400).json({ errors })
 }
 
-function recommendation(req, res, next){
-  const fullName = req.body.fullName.replace(/[&\/\\#,+()$~%.'´":*?<>{}@1234567890]/g, '').trim() || ''
+function recommendation(req, res, next){ 
+  const fullName = req.body.fullName || ''
   const description = req.body.description || ''
   const stars = req.body.stars || ''
   const situation = req.body.situation || ''
