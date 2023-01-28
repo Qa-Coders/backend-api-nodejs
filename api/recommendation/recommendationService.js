@@ -67,10 +67,6 @@ function recommendation(req, res, next){
     return res.status(400).send({ alert: ["Informe a quantidade de estrelas que deseja classificar."] })
   }
 
-  if (situation == null || situation == "") {
-    return res.status(400).send({ alert: ["O campo situação é obrigatório."] })
-  }
-
   const newBody = new Recommendation(
     {
       fullName: fullName,

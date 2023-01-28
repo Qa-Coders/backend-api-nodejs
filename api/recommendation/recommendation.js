@@ -7,7 +7,7 @@ const recommendationSchema = new mongoose.Schema({
    fullName: { type: String, required: true },
    description: { type: String, required: false },
    stars: { type: Number, required: false },
-   situation: { type: String, required: true },
+   situation: { type: String, required: false },
    status: { type: Boolean, required: true },
 })
 
