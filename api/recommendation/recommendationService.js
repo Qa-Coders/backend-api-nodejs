@@ -50,6 +50,7 @@ function recommendation(req, res, next){
   const description = req.body.description || ''
   const stars = req.body.stars || ''
   const situation = req.body.situation || ''
+  const status = req.body.status || ''
 
   if (fullName == null || fullName == "") {
     return res.status(400).send({ alert: ["O campos Nome Completo é obrigatório."] })
@@ -71,9 +72,9 @@ function recommendation(req, res, next){
     {
       fullName: fullName,
       description,
-      situation: "Pendente",
+      situation,
       stars,
-      status: true
+      status
     })
   newBody.save(err => {
     if (err) {
